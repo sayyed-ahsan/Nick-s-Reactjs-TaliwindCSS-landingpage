@@ -6,11 +6,13 @@ import GetStartedCard from "./sections/GetStartedCard";
 import Plan from "./sections/Plan";
 import Amazon from "./sections/Amazon";
 import Companies from "./sections/Companies";
+import Banner from "./sections/Banner";
 
 const MainIndex = () => {
   return (
     <div>
       {/* <Header /> */}
+      <Banner />
       <Companies />
       <Features />
       <Amazon />
