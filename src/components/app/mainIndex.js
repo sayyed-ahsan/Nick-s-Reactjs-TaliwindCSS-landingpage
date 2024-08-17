@@ -11,7 +11,7 @@ import Banner from "./sections/Banner";
 const MainIndex = () => {
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Banner />
       <Companies />
       <Features />

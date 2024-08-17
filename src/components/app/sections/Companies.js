@@ -5,7 +5,7 @@ import StarImage from "../../medias/starImage.png";
 
 const Companies = () => {
   return (
-    <div className="mx-auto max-w-[1120px]  px-[24px] sm:px-0 mt-[100px] mb-[100px]">
+    <div className="mx-auto max-w-[1120px]  px-[24px] sm:px-0 md:mt-[430px] sm:mt-[250px] mt-[200px] mb-[100px]">
       <p className="sm:text-[48px] text-[42px] text-center mb-[64px]">
         Trusted by{" "}
         <span className="text-[#1387f2]">
