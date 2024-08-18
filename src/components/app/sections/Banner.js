@@ -23,7 +23,6 @@ const Banner = () => {
         <div>
           <img src={HeroImg} alt="" />
         </div>
-
       </div>
       <img className="mx-auto" src={HeroBottomSection} alt="" />
     </div>

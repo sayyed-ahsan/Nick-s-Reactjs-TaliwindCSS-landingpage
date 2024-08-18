@@ -20,22 +20,20 @@ const Features = () => {
       </AnimatedDiv>
       <div className="flex max-w-[624px] mx-auto bg-[#EDEDED] p-[12px] rounded-[32px] mb-[35px] mt-[40px]">
         <div
-          className={`cursor-pointer max-w-[300px] w-full flex items-center justify-center rounded-[16px] p-[22px] ${show && "bg-white"
-            }`}
-          onClick={() => setShow(!show)}
+          className={`cursor-pointer max-w-[300px] w-full flex items-center justify-center rounded-[16px] p-[22px] animated-bg ${show ? "bg-white" : "bg-[#EDEDED]"}`}
+          onClick={() => setShow(true)}
         >
           <img src={Shipstation} alt="Shipstation logo" />
         </div>
         <div
-          className={`cursor-pointer max-w-[300px] w-full flex items-center justify-center rounded-[16px] p-[24px] ${!show && "bg-white"
-            }`}
-          onClick={() => setShow(!show)}
+          className={`cursor-pointer max-w-[300px] w-full flex items-center justify-center rounded-[16px] p-[24px] animated-bg ${!show ? "bg-white" : "bg-[#EDEDED]"}`}
+          onClick={() => setShow(false)}
         >
           <img src={Veeqo} alt="Veeqo logo" />
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-between gap-y-[24px]">
+      {show ? <div className="flex flex-wrap justify-between gap-y-[24px]">
         <AosAnimation
           animationType="fade-right"
           duration={2000}
@@ -46,7 +44,7 @@ const Features = () => {
             <h3 className="text-[24px] font-semibold mt-[4px]">Stay in Sync</h3>
             <p className="text-[16px] text-gray-500 text-left">
               Custom data is synced as orders come in to ShipStation. Not on a
-              timer, not when you click a button; it's automatic.
+              timer, not when you click a  automatic.
             </p>
           </div>
         </AosAnimation>
@@ -69,7 +67,7 @@ const Features = () => {
             </div>
             <div className="flex items-center gap-[8px]">
               <img src={tikMark} alt="tik mark" />
-              <p className="text-[16px] text-gray-500">Note from Buyer</p>
+              <p className="text-[16px] text-gray-500">Note  Buyer</p>
             </div>
             <div className="flex items-center gap-[8px]">
               <img src={tikMark} alt="tik mark" />
@@ -101,7 +99,7 @@ const Features = () => {
             <div className="flex items-center gap-[8px]">
               <img src={tikMark} alt="tik mark" />
               <p className="text-[16px] text-gray-500">
-                Include/exclude quantity
+                Include/exclude
               </p>
             </div>
             <div className="flex items-center gap-[8px]">
@@ -124,11 +122,106 @@ const Features = () => {
             </h3>
             <p className="text-[16px] text-gray-500 text-left">
               Have multiple Amazon stores connected to ShipStation? Choose only
-              the stores you want to sync.
+              the stores ync.
             </p>
           </div>
         </AosAnimation>
       </div>
+        :
+        <div className="flex flex-wrap justify-between gap-y-[24px]">
+          <AosAnimation
+            animationType="fade-right"
+            duration={2000}
+            delay={100}
+          >
+            <div className="sm:max-w-[262px] max-w-full p-[12px] sm:mx-auto mx-[0]">
+              <img src={featureImg1} alt="Stay in Sync" />
+              <h3 className="text-[24px] font-semibold mt-[4px]">Stay in Sync</h3>
+              <p className="text-[16px] text-gray-500 text-left">
+                Custom data is synced as orders come in to ShipStation. Not on a
+                timer, not when you click a button; it's automatic.
+              </p>
+            </div>
+          </AosAnimation>
+          <AosAnimation
+            animationType="fade-right"
+            duration={2000}
+            delay={100}
+          >
+            <div className="sm:max-w-[262px] max-w-full p-[12px] sm:mx-auto mx-[0]">
+              <img src={featureImg2} alt="Choose Where Data Goes" />
+              <h3 className="text-[24px] font-semibold mt-[4px]">
+                Choose Where Data Goes
+              </h3>
+              <p className="text-[16px] text-gray-500 text-left">
+                Sync custom data into any of these sections of a ShipStation order:
+              </p>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">Line Item Description</p>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">Note from Buyer</p>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">Internal Notes</p>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">Custom Field 1, 2, or 3</p>
+              </div>
+            </div>
+          </AosAnimation>
+          <AosAnimation
+            animationType="fade-left"
+            duration={2000}
+            delay={100}
+          >
+            <div className="sm:max-w-[262px] max-w-full p-[12px] sm:mx-auto mx-[0]">
+              <img src={featureImg3} alt="Customizable" />
+              <h3 className="text-[24px] font-semibold mt-[4px]">Customizable</h3>
+              <p className="text-[16px] text-gray-500 text-left">
+                Fully customizable display of the item's custom data:
+              </p>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">
+                  Include/exclude item names
+                </p>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">
+                  Include/exclude quantity
+                </p>
+              </div>
+              <div className="flex items-center gap-[8px]">
+                <img src={tikMark} alt="tik mark" />
+                <p className="text-[16px] text-gray-500">
+                  Include/exclude custom field names
+                </p>
+              </div>
+            </div>
+          </AosAnimation>
+          <AosAnimation
+            animationType="fade-left"
+            duration={2000}
+            delay={100}
+          >
+            <div className="sm:max-w-[262px] max-w-full p-[12px] sm:mx-auto mx-[0]">
+              <img src={featureImg4} alt="Store Selection" />
+              <h3 className="text-[24px] font-semibold mt-[4px]">
+                Store Selection
+              </h3>
+              <p className="text-[16px] text-gray-500 text-left">
+                Have multiple Amazon stores connected to ShipStation? Choose only
+                the stores you want to sync.
+              </p>
+            </div>
+          </AosAnimation>
+        </div>}
     </div >
   );
 };

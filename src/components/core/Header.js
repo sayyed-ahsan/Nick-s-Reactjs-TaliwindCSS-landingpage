@@ -6,10 +6,8 @@ import MoblieHeader from './MoblieHeader';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-
     useEffect(() => {
         let lastScrollTop = 0;
-
         const handleScroll = () => {
             const scrollTop =
                 window.pageYOffset || document.documentElement.scrollTop;

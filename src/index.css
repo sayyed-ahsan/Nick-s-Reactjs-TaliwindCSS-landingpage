@@ -19,3 +19,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.animated-bg {
+  transition: background-color 0.3s ease-in-out;
+  /* Adjust duration and easing as needed */
+}

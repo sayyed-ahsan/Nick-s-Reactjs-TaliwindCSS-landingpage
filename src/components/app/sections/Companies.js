@@ -18,7 +18,6 @@ const Companies = () => {
         </p>
       </AnimatedDiv>
 
-      {/* ------------- */}
       <div className="mx-auto flex flex-wrap justify-between bg[#5BE1C6] gap-y-[75px]">
         <div className=" mx-auto text-center max-w-[353px] w-full">
           <img className="mx-auto" src={HoursImage} alt="" />
@@ -67,7 +66,6 @@ const Companies = () => {
             timer, not when you click a button; it's automatic.
           </p>
         </div>
-        {/* ---- */}
       </div>
     </div>
   );
