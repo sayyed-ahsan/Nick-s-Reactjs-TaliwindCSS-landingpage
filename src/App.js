@@ -1,4 +1,5 @@
 import MainIndex from "./components/app/mainIndex";
+import 'aos/dist/aos.css';
 
 function App() {
   return (

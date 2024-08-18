@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import headerLogo from "../medias/header-logo.png";
-import mobileMenu from "../medias/mobileMenu.png";
+import MoblieHeader from './MoblieHeader';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -28,8 +28,7 @@ const Header = () => {
             initial={{ y: -100 }}
             animate={{ y: isScrolled ? -100 : 0 }}
             transition={{ ease: "easeOut", duration: 0.26 }}
-            className={`fixed top-0 left-0 right-0 ${isScrolled ? "bg-black/40" : "bg-transparent"
-                } z-50 bg-[#3B79B3] h-[66px]`}
+            className={`fixed top-0 left-0 right-0 z-50 bg-[#3B79B3] h-[66px]`}
         >
             <div className="flex justify-between items-center max-w-[1120px] mx-auto pt-[12px] px-[24px]">
                 <img className='cursor-pointer' src={headerLogo} alt="" />
@@ -41,7 +40,9 @@ const Header = () => {
                         Login
                     </div>
                 </div>
-                <img className='sm:hidden block cursor-pointer' src={mobileMenu} alt="" />
+                <div className='sm:hidden block'>
+                    <MoblieHeader />
+                </div>
             </div>
         </motion.div>
     );
