@@ -23,9 +23,6 @@ const Header = () => {
     }, []);
     return (
         <motion.div
-            initial={{ y: -100 }}
-            animate={{ y: isScrolled ? -100 : 0 }}
-            transition={{ ease: "easeOut", duration: 0.26 }}
             className={`fixed top-0 left-0 right-0 z-50 bg-[#3B79B3] h-[66px]`}
         >
             <div className="flex justify-between items-center max-w-[1120px] mx-auto pt-[12px] px-[24px]">

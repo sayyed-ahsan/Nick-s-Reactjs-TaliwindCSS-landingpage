@@ -1,21 +1,28 @@
 import React from "react";
 import tikMark from "../../medias/PlantikVector.png";
-import AnimatedDiv from "../../core/AnimationDiv";
+import { motion } from 'framer-motion';
 import AosAnimation from "../../core/AosAnimation";
 
 const Plan = () => {
   return (
     <div className="mx-auto max-w-[1120px] px-[24px] sm:px-0 mt-[100px] mb-[250px]" id="Pricing">
-      <AnimatedDiv duration={1} delay={0.2}>
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <p className="sm:text-[48px] text-[42px] text-center mb-[64px]">
           Find the <span className="text-[#1387f2]">right plan</span> for you
         </p>
-      </AnimatedDiv>
+      </motion.div>
       <div className="flex flex-wrap items-center justify-between gap-[24px]">
-        <AosAnimation
-          animationType="fade-right"
-          duration={2000}
-          delay={100}
+
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="sm:min-w-[357px] min-w-[357px] w-full mx-auto p-[24px] rounded-[16px] border-[1px] border-[#BABABA]">
             <p className="text-[32px] font-medium leading-6">Starter</p>
@@ -45,11 +52,13 @@ const Plan = () => {
               Get Started
             </button>
           </div>
-        </AosAnimation>
-        <AosAnimation
-          animationType="fade-up"
-          duration={2000}
-          delay={100}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div
             className="sm:min-w-[357px] min-w-[357px] w-full mx-auto p-[24px] shadow-2xl rounded-[16px]"
@@ -83,11 +92,13 @@ const Plan = () => {
             <button className="text-[16px] text-white font-bold py-[8px] w-full mt-[24px] border-[1px] border-[#F29E13] bg-[#F29E13] rounded-[32px]">
               Get Started
             </button>
-          </div></AosAnimation>
-        <AosAnimation
-          animationType="fade-left"
-          duration={2000}
-          delay={100}
+          </div></motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <div className="sm:min-w-[357px] min-w-[357px] w-full mx-auto p-[24px] rounded-[16px] border-[1px] border-[#BABABA]">
             <p className="text-[32px] font-medium leading-6">Business</p>
@@ -117,9 +128,9 @@ const Plan = () => {
               Get Started
             </button>
           </div>
-        </AosAnimation>
+        </motion.div>
       </div>
-    </div>
+    </div >
   );
 };
 
